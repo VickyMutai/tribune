@@ -18,7 +18,7 @@ class Editor(models.Model):
     def delete_editor(self):
         self.delete()
 
-class tags(models.Model):
+class Tags(models.Model):
     name = models.CharField(max_length = 30)
 
     def __str__(self):
@@ -29,7 +29,7 @@ class Article(models.Model):
     post = models.TextField()
     pub_date = models.DateTimeField(auto_now_add = True)
     editor = models.ForeignKey(Editor)
-    tags = models.ManyToManyField(tags)
+    tags = models.ManyToManyField(Tags)
 
     def save_article(self):
         self.save()
