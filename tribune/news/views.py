@@ -33,6 +33,6 @@ def past_days_news(request,past_date):
     day = convert_dates(date)
 
     if date == dt.date.today():
-        return redirect(news_today)
+        return redirect(news_of_day)
 
     return render(request,'all-news/past_news.html',{"date":date})
