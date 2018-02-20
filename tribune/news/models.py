@@ -28,3 +28,9 @@ class Article(models.Model):
     pub_date = models.DateTimeField(auto_now_add = True)
     editor = models.ForeignKey(Editor)
     tags = models.ManyToManyField(tags)
+
+    def save_article(self):
+        self.save()
+
+    def delete_article(self):
+        self.delete()
