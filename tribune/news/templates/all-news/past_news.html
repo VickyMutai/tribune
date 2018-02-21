@@ -8,7 +8,7 @@
     {% for news_item in news %}
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <h2 class="text-center">{{news_item.title}}</h2>
+            <h2 class="text-center"><a href="/article/{{news_item.id}}">{{news_item.title}}</a></h2>
             <p class="text-center"><i>{{news_item.editor}}</i> Tags: 
                 {% for tag in news_item.tags.all %}
                         <b class = "btn btn-info">{{tag}}</b>
