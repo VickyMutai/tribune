@@ -79,14 +79,14 @@ WSGI_APPLICATION = 'tribune.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME':'tribune',
-#         'USER':'vicky',
-#         'PASSWORD':'0716889165',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'tribune',
+        'USER':'vicky',
+        'PASSWORD':'0716889165',
+    }
+}
 
 db_from_env= dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
